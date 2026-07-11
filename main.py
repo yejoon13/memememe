@@ -6,97 +6,47 @@ st.set_page_config(
     layout="wide"
 )
 
-# =======================
-# CSS 디자인
-# =======================
 st.markdown("""
 <style>
-
 .stApp{
-    background: linear-gradient(to bottom, #0f172a, #1e293b);
-    color: white;
+    background-color:#1E293B;
+    color:white;
 }
 
-h1{
+h1,h2,h3{
     color:#FFD166;
-    text-align:center;
-}
-
-h2,h3{
-    color:#FFD166;
-}
-
-div.block-container{
-    padding-top:2rem;
-    padding-bottom:2rem;
 }
 
 [data-testid="stSidebar"]{
-    background-color:#111827;
+    background-color:#0F172A;
 }
-
-.stButton>button{
-    background-color:#FFD166;
-    color:black;
-    border-radius:10px;
-    font-weight:bold;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
-# =======================
-# 메인 화면
-# =======================
-
 st.title("🎯 나의 취미 소개")
 
-st.write("---")
-
-st.header("안녕하세요! 👋")
-
 st.write("""
-이 웹사이트는 **저의 취미를 소개하기 위해 만든 Streamlit 프로젝트**입니다.
+안녕하세요!
 
-저는 다양한 취미를 가지고 있으며,
-그중에서도 가장 좋아하는 취미 세 가지를 소개하고자 합니다.
+이 사이트는 제가 좋아하는 취미를 소개하기 위해 만든 웹사이트입니다.
 
-왼쪽 사이드바에서 원하는 페이지를 선택해 주세요.
+왼쪽 메뉴에서 원하는 페이지를 선택해 주세요.
 """)
 
-st.write("### 📚 소개할 취미")
+st.write("---")
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("""
-### ⚾ 야구
-
-- 가장 좋아하는 팀
-- 좋아하는 선수
-- 야구의 매력
-""")
+    st.subheader("⚾ 야구")
+    st.write("좋아하는 팀과 선수 소개")
 
 with col2:
-    st.markdown("""
-### 📚 독서
-
-- What If?
-- 랜들 먼로
-- 과학 이야기
-""")
+    st.subheader("📚 독서")
+    st.write("가장 좋아하는 과학책 소개")
 
 with col3:
-    st.markdown("""
-### 🧩 큐브
+    st.subheader("🧩 큐브")
+    st.write("3×3 큐브 취미 소개")
 
-- 3×3 큐브
-- 최고 기록 18초
-- GAN Cube
-""")
-
-st.write("---")
-
-st.info("💡 왼쪽 메뉴에서 페이지를 선택하여 각 취미를 자세히 살펴보세요!")
-
-st.caption("Made with ❤️ using Streamlit")
+st.success("👈 왼쪽 메뉴에서 페이지를 선택하세요!")
